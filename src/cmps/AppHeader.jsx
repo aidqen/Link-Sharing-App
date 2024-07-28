@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 export function AppHeader() {
   return (
     <header className=" rounded-lg px-10 mb-7 h-20 flex flex-row items-center justify-between bg-white">
-      <div className="logo flex flex-row items-center  gap-1">
+      <div className="logo flex flex-row items-center gap-1 cursor-pointer">
         <img
           className=""
           src="/src/assets/images/logo-devlinks-small.svg"
@@ -39,7 +39,7 @@ export function AppHeader() {
           <h4>Profile Details</h4>
         </NavLink>
       </nav>
-      <button className="px-5 border-[1px] border-purple-bright rounded-md py-2 text-purple-bright font-semibold">
+      <button className="px-5 border-[1px] border-purple-bright rounded-md py-2 text-purple-bright font-semibold hover:text-white hover:bg-purple-bright duration-200">
         Preview
       </button>
     </header>
