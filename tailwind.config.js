@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
@@ -11,13 +8,16 @@ export default {
       },
       colors: {
         purple: {
-          light: '#FFFFFFB3',
+          light: '#EEEAFD',
           bright: '#663FFD',
           dark: '#00000026',
           dark2: '#00000033',
-          veryDark: '#00000080'
-        }
-      }
+          veryDark: '#00000080',
+        },
+        gray: {
+          medium: '#737373',
+        },
+      },
     },
   },
   plugins: [],

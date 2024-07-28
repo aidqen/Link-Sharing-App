@@ -7,7 +7,7 @@ import { AppHeader } from './cmps/AppHeader'
 export function App() {
   return (
     <Router>
-      <section className="app w-screen h-screen font-sans bg-[#FAFAFA] overflow-x-hidden">
+      <section className="app w-screen h-screen font-sans bg-[#FAFAFA] overflow-x-hidden m-7">
         <AppHeader />
         <main>
           <Routes>

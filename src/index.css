@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('/src/assets/styles/utility.css');
+
 @font-face {
     font-family: 'Instrument Sans';
     src: url('/src/assets/fonts/InstrumentSans-VariableFont_wdth\,wght.ttf') format('truetype');
