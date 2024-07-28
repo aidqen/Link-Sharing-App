@@ -6,6 +6,13 @@ export default {
       fontFamily: {
         sans: ['Instrument Sans', 'sans-serif'], // Use the custom font as the sans-serif
       },
+      width: {
+        calcCustom: 'calc(100% - (1.75rem * 2))',
+      },
+      height: {
+        calcCustom: 'calc(100vh - (1.75rem * 2))',
+        mainHeight: 'calc(100% - (5rem + (1.75rem * 2)))',
+      },
       colors: {
         purple: {
           light: '#EEEAFD',
@@ -17,8 +24,14 @@ export default {
         gray: {
           medium: '#737373',
         },
+        background: {
+          white: 'white',
+          mainBg: 'rgb(248,248,248)'
+        }
       },
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }

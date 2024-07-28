@@ -19,3 +19,7 @@
     font-stretch: 75% 125%; /* Define the range of width axis */
     font-display: swap;
   }
+
+  #root {
+    background-color: #FAFAFA;
+  }

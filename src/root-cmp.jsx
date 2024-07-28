@@ -7,9 +7,9 @@ import { AppHeader } from './cmps/AppHeader'
 export function App() {
   return (
     <Router>
-      <section className="app w-screen h-screen font-sans bg-[#FAFAFA] overflow-x-hidden m-7">
+      <section className="app h-calcCustom font-sans overflow-x-hidden m-7">
         <AppHeader />
-        <main>
+        <main className=''>
           <Routes>
             <Route path='/' element={<LinkSharingIndex />} />
             <Route path='/profile/:userId' element={<ProfileDetails />} />

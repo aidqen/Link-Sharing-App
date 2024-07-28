@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 export function AppHeader() {
   return (
-    <header className=" rounded-lg px-10 mb-7 h-20 w-[calc(100%-1.75em*2)] flex flex-row items-center justify-between bg-white">
+    <header className=" rounded-lg px-10 mb-7 h-20 flex flex-row items-center justify-between bg-white">
       <div className="logo flex flex-row items-center  gap-1">
         <img
           className=""
@@ -22,7 +22,7 @@ export function AppHeader() {
             }`
           }
         >
-          <i class="fas fa-link"></i>
+          <i className="fas fa-link"></i>
           <h4>Links</h4>
         </NavLink>
         <NavLink
