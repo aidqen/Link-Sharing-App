@@ -1,8 +1,12 @@
+import { CustomizeMain } from "../cmps/CustomizeMain";
+import { PhonePreview } from "../cmps/PhonePreview";
+
 export function LinkSharingIndex() {
      
     return (
-        <div>
-            <h1>Link Sharing Index</h1>
+        <div className="h-full w-full flex flex-row rounded-2xl gap-5">
+            <PhonePreview />
+            <CustomizeMain />
         </div>
     )
 }
