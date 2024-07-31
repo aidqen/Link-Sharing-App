@@ -18,6 +18,9 @@ function appReducer(state = initialState, action) {
 
     case ADD_LINK:
         return { ...state, linksList: [...state.linksList, action.link]}
+
+        case UPDATE_LINK:
+            return {...state, linksList: state.linksList.map(link => link.id === action.link.id ? action.link : link)}
     default:
       return state
   }
