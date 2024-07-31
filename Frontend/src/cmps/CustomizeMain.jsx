@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { LinksList } from "./LinksList";
 import { LinksListHeader } from "./LinksListHeader";
+import { useSelector } from "react-redux";
+import { addLink } from "../store/actions/links.actions";
 
 export function CustomizeMain() {
-    const [linksList, setLinksList] = useState(
-        [{ platform: 'Instagram', link: 'https://www.instagram.com' }, { platform: 'Facebook', link: 'https://www.facebook.com' }, { platform: 'Twitter', link: 'https://www.twitter.com' },]
-    );
-    
+  const linksList = useSelector(state => state.linksList)  
+  console.log(linksList);
+
     function onAddLink() {
-        setLinksList(links => [{ platform: '', link: '' }, ...links])
+      addLink()
     }
 
   return (
