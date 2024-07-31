@@ -3,7 +3,7 @@ import { LinksList } from "./LinksList";
 
 export function CustomizeMain() {
     const [linksList, setLinksList] = useState(
-        [{ platform: 'Instagram', link: 'https://www.instagram.com' }, { platform: 'Facebook', link: 'https://www.facebook.com' }, { platform: 'Twitter', link: 'https://www.twitter.com' }, { platform: 'LinkedIn', link: 'https://www.linkedin.com' }, { platform: 'GitHub', link: 'https://www.github.com' }, { platform: 'Portfolio', link: 'https://www.portfolio.com' }, { platform: 'Other', link: 'https://www.other.com' }]
+        [{ platform: 'Instagram', link: 'https://www.instagram.com' }, { platform: 'Facebook', link: 'https://www.facebook.com' }, { platform: 'Twitter', link: 'https://www.twitter.com' },]
     );
     
     function onAddLink() {

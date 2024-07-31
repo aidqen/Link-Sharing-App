@@ -7,7 +7,9 @@ export function PhonePreview() {
         <div class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
         <div class="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
         <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
-            
+            <div className="phone-content h-full bg-white">
+                
+            </div>
         </div>
       </div>
     </div>
