@@ -5,6 +5,7 @@ import { LoginSignup } from './pages/LoginSignup'
 import { AppHeader } from './cmps/AppHeader'
 import { Provider } from 'react-redux'
 import { store } from './store/store'
+import { ProfileLaunchPreview } from './pages/ProfileLaunchPreview'
 
 export function App() {
   return (
@@ -14,8 +15,9 @@ export function App() {
           <AppHeader />
           <main className="">
             <Routes>
-              <Route path="/" element={<LinkSharingIndex />} />
+              <Route path="/edit" element={<LinkSharingIndex />} />
               <Route path="/profile/:userId" element={<ProfileDetails />} />
+              <Route path="/preview" element={<ProfileLaunchPreview />} />
               <Route path="auth" element={<LoginSignup />} />
             </Routes>
           </main>
