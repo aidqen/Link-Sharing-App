@@ -11,11 +11,11 @@ export function PreviewHeader() {
     <>
       <button
         onClick={navigateToEditor}
-        className="py-3 px-6 border-[1px] border-purple-bright text-purple-bright rounded-md"
+        className="py-3 px-6 border border-purple-bright text-purple-bright rounded-md font-semibold  hover:bg-purple-bright hover:text-white duration-200"
       >
         Back To Editor
       </button>
-      <button className="py-3 px-6 border-[1px] border-purple-bright text-white bg-purple-bright rounded-md ">
+      <button className="py-3 px-6 border border-purple-bright text-white bg-purple-bright rounded-md font-semibold hover:bg-white hover:text-purple-bright duration-200">
         Share Link
       </button>
     </>
