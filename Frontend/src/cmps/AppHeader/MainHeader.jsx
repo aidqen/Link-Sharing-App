@@ -7,7 +7,7 @@ export function MainHeader() {
     navigate('/preview')
   }
   return (
-    <>
+    <header className="rounded-lg px-10 mb-7 h-20 flex flex-row items-center justify-between bg-white z-10">
       <div className="logo flex flex-row items-center gap-1 cursor-pointer">
         <img
           className=""
@@ -50,6 +50,6 @@ export function MainHeader() {
       >
         Preview
       </button>
-    </>
+    </header>
   )
 }

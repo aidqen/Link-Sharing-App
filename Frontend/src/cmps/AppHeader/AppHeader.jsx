@@ -20,8 +20,9 @@ export function AppHeader() {
   
 
   return (
-    <header className=" rounded-lg px-10 mb-7 h-20 flex flex-row items-center justify-between bg-white">
+    <>
       {isPreview ? <PreviewHeader /> : <MainHeader />}
-    </header>
+    </>
+    
   )
 }
