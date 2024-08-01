@@ -1,7 +1,18 @@
-import { NavLink, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 
 export function AppHeader() {
+  const [isPreview, setIsPreview] = useState(false);
+  
   const navigate = useNavigate()
+  const location = useLocation()
+  console.log(isPreview);
+  useEffect(() => {
+    if (location.pathname === '/preview') {
+      setIsPreview(true)
+    } else {setIsPreview(false)}
+  }, [location])
+  
 
   function navigateToPreview() {
     navigate('/preview')
