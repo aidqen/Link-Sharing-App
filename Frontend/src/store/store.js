@@ -7,7 +7,7 @@ export const UPDATE_LINK = 'UPDATE_LINK'
 export const SET_LOADING = 'SET_LOADING'
 
 const initialState = {
-  linksList: [{ id: 'n199', platform: '', link: '' }],
+  linksList: [{ _id: 'n199', platform: '', url: '', icon: '', }],
   isLoading: false,
 }
 
@@ -17,10 +17,21 @@ function appReducer(state = initialState, action) {
       return { ...state, linksList: action.linksList }
 
     case ADD_LINK:
-        return { ...state, linksList: [...state.linksList, action.link]}
+      return { ...state, linksList: [...state.linksList, action.link] }
 
-        case UPDATE_LINK:
-            return {...state, linksList: state.linksList.map(link => link.id === action.link.id ? action.link : link)}
+    case UPDATE_LINK:
+      return {
+        ...state,
+        linksList: state.linksList.map(link =>
+          link.id === action.link.id ? action.link : link
+        ),
+      }
+    case REMOVE_LINK:
+      console.log(action._id);
+      return {
+        ...state,
+        linksList: state.linksList.filter(link => link._id !== action._id),
+      }
     default:
       return state
   }

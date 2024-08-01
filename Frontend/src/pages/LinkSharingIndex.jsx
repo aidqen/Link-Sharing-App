@@ -1,5 +1,5 @@
-import { CustomizeMain } from "../cmps/CustomizeMain";
-import { PhonePreview } from "../cmps/PhonePreview";
+import { CustomizeMain } from "../cmps/CustomizeMain/CustomizeMain";
+import { PhonePreview } from "../cmps/PhonePreview/PhonePreview";
 
 export function LinkSharingIndex() {
      
