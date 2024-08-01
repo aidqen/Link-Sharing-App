@@ -1,6 +1,6 @@
 import { LinkPreview } from "./LinkPreview"
 
-export function LinksList({ linksList, onUpdateLink}) {
+export function LinksList({ linksList, onUpdateLink, onRemoveLink}) {
   if (!linksList) return
 
 
@@ -14,7 +14,7 @@ export function LinksList({ linksList, onUpdateLink}) {
         )}
       {linksList.map((link, idx) => {
         return (
-          <LinkPreview link={link} idx={idx} key={link.id} onUpdateLink={onUpdateLink}/>
+          <LinkPreview link={link} idx={idx} key={link._id} onUpdateLink={onUpdateLink} onRemoveLink={onRemoveLink}/>
         )
       })}
     </form>
