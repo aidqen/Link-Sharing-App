@@ -1,34 +1,29 @@
 import { useEffect, useState } from "react"
 import { updateLink } from "../../store/actions/links.actions"
 
-export function LinkPreview({ link, idx, onUpdateLink, onRemoveLink }) {
-  const [linkToEdit, setLinkToEdit] = useState(link)
-
-  useEffect(() => {
-    onUpdateLink(linkToEdit)
-  }, [linkToEdit])
-
-
+export function LinkPreview({ link, handleLinksUpdate, idx, onRemoveLink }) {
+  const [editedLink, setEditedLink] = useState(link)
   
 
-  const { platform } = linkToEdit
+  const { platform, url, _id } = editedLink
 
 
   const socialMediaOptions = [
-    { value: '', label: 'Select' },
-    { value: 'instagram', label: 'Instagram' },
-    { value: 'youtube', label: 'YouTube' },
-    { value: 'facebook', label: 'Facebook' },
-    { value: 'x', label: 'X' },
-    { value: 'linkedIn', label: 'LinkedIn' },
-    { value: 'gitHub', label: 'GitHub' },
-    { value: 'portfolio', label: 'Portfolio' },
-    { value: 'other', label: 'Other' },
+    { value: '', label: 'Select', id: 'n101' },
+    { value: 'instagram', label: 'Instagram', id: 'n102' },
+    { value: 'youtube', label: 'YouTube', id: 'n103' },
+    { value: 'facebook', label: 'Facebook', id: 'n104' },
+    { value: 'x', label: 'X', id: 'n105' },
+    { value: 'linkedIn', label: 'LinkedIn', id: 'n106' },
+    { value: 'gitHub', label: 'GitHub', id: 'n107' },
+    { value: 'portfolio', label: 'Portfolio', id: 'n108' },
+    { value: 'other', label: 'Other', id: 'n109' },
   ]
 
   function handleUpdate({ target }) {
     const { name, value } = target
-    setLinkToEdit({ ...linkToEdit, [name]: value })
+    setEditedLink({...editedLink, [name]: value})
+    handleLinksUpdate(idx, {...editedLink, [name]: value})
   }
 
   return (
@@ -38,7 +33,7 @@ export function LinkPreview({ link, idx, onUpdateLink, onRemoveLink }) {
           <i className="fas fa-bars font-extralight"></i>
           <h3 className="font-bold">Link #{idx + 1}</h3>
         </div>
-        <button className="hover:underline" onClick={(ev) => onRemoveLink(linkToEdit._id, ev)}>Remove</button>
+        <button className="hover:underline" onClick={(ev) => onRemoveLink(_id, ev)}>Remove</button>
       </div>
       <div className="flex flex-col gap-5">
         <div className="flex flex-col">
@@ -51,7 +46,7 @@ export function LinkPreview({ link, idx, onUpdateLink, onRemoveLink }) {
             name="platform"
           >
             {socialMediaOptions.map(option => (
-              <option key={option.value} value={option.value}>
+              <option key={option.id} value={option.value}>
                 {option.label}
               </option>
             ))}
@@ -62,7 +57,7 @@ export function LinkPreview({ link, idx, onUpdateLink, onRemoveLink }) {
           <input
             type="text"
             name="url"
-            value={linkToEdit.url}
+            value={url}
             placeholder="https://www.example.com..."
             className="border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent 
            invalid:border-red-500 invalid:text-red-600 rounded-md px-3 py-3 transition duration-200"
