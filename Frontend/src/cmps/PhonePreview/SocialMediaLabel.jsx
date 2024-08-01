@@ -29,7 +29,7 @@ export function SocialMediaLabel({ platform, url }) {
   return (
     <div
       className={`flex flex-row justify-between items-center rounded-lg h-[3em] px-4 py-2
-     text-slate-50 w-full mb-4 ${options.classes} `}
+     text-slate-50 w-full mb-4 cursor-pointer ${options.classes} `}
     >
       <div className="text flex flex-row gap-5 items-center">
         {Icon && <Icon />}
