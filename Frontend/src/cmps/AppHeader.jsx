@@ -1,6 +1,12 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 export function AppHeader() {
+  const navigate = useNavigate()
+
+  function navigateToPreview() {
+    navigate('/preview')
+  }
+
   return (
     <header className=" rounded-lg px-10 mb-7 h-20 flex flex-row items-center justify-between bg-white">
       <div className="logo flex flex-row items-center gap-1 cursor-pointer">
@@ -13,7 +19,7 @@ export function AppHeader() {
       </div>
       <nav className="flex flex-row gap-5 parent-nav text-[1em] ">
         <NavLink
-          to="/"
+          to="/edit"
           className={({ isActive }) =>
             `flex flex-row items-center rounded-md px-4 py-2 font-bold gap-2 ${
               isActive
@@ -39,7 +45,7 @@ export function AppHeader() {
           <h4>Profile Details</h4>
         </NavLink>
       </nav>
-      <button className="px-5 border-[1px] border-purple-bright rounded-md py-2 text-purple-bright font-semibold hover:text-white hover:bg-purple-bright duration-200">
+      <button onClick={navigateToPreview} className="px-5 border-[1px] border-purple-bright rounded-md py-2 text-purple-bright font-semibold hover:text-white hover:bg-purple-bright duration-200">
         Preview
       </button>
     </header>
