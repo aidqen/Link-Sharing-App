@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { LinkSharingIndex } from './pages/LinkSharingIndex'
-import { ProfileDetails } from './cmps/ProfileDetails'
+import { ProfileDetails } from './cmps/ProfileDetails/ProfileDetails'
 import { LoginSignup } from './pages/LoginSignup'
 import { AppHeader } from './cmps/AppHeader/AppHeader'
 import { Provider } from 'react-redux'
@@ -20,7 +20,6 @@ export function App() {
                 <Route path="/profile" element={<ProfileDetails />} />
                 <Route path="/edit" element={<CustomizeMain />} />
               </Route>
-              {/* <Route path="/profile/:userId" element={<ProfileDetails />} /> */}
               <Route path="/preview" element={<ProfileLaunchPreview />} />
               <Route path="auth" element={<LoginSignup />} />
             </Routes>
