@@ -4,13 +4,19 @@ import { ProfileInputs } from './ProfileInputs'
 import { useState } from 'react';
 import { ImagePick } from './ImagePick';
 import { useSelector } from 'react-redux';
+import { savePersonalDetails } from '../../store/actions/links.actions';
 
 export function ProfileDetails() {
   // const params = useParams()
   const personalDetails = useSelector((state) => state.personalDetails);
   const [detailsToEdit, setDetailsToEdit] = useState({...personalDetails});
-  
   const [pickedImage, setPickedImage] = useState(null);
+  console.log('detailsToEdit:', detailsToEdit)
+  console.log('personalDetails:', personalDetails)
+  
+  function onSavePersonalDetails(){
+    savePersonalDetails(detailsToEdit)
+  }
 
   function handleChange({target}) {
     const {name,value} = target    
@@ -26,7 +32,7 @@ export function ProfileDetails() {
       <ImagePick />
       <ProfileInputs {...detailsToEdit} handleChange={handleChange}/>
       <hr className='h-[3px] w-full mb-4'/>
-      <button className='main-btn'>Save</button>
+      <button onClick={onSavePersonalDetails} className='main-btn'>Save</button>
     </div>
   )
 }

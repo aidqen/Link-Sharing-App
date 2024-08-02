@@ -6,6 +6,8 @@ export function saveLinks(linksList) {
     gStore.dispatch({ type: SET_LINKS_LIST, linksList })
 }
 
+export function savePersonalDetails(personalDetails) {
+    gStore.dispatch({ type: SET_PERSONAL_DETAILS, personalDetails })
 }
 
 export function updateLink(link) {

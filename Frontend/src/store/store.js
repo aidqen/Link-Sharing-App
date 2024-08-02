@@ -8,6 +8,7 @@ export const SET_LOADING = 'SET_LOADING'
 
 const initialState = {
   linksList: [{ _id: 'n199', platform: '', url: '', icon: '', }],
+  personalDetails: {img: '',firstName: '', lastName: '', email: ''},
   isLoading: false,
 }
 
@@ -32,6 +33,8 @@ function appReducer(state = initialState, action) {
         ...state,
         linksList: state.linksList.filter(link => link._id !== action._id),
       }
+    case SET_PERSONAL_DETAILS:
+      return { ...state, personalDetails: action.personalDetails }
     default:
       return state
   }
