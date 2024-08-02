@@ -6,6 +6,7 @@ import { AppHeader } from './cmps/AppHeader/AppHeader'
 import { Provider } from 'react-redux'
 import { store } from './store/store'
 import { ProfileLaunchPreview } from './pages/ProfileLaunchPreview'
+import { CustomizeMain } from './cmps/CustomizeMain/CustomizeMain'
 
 export function App() {
   return (
@@ -15,8 +16,11 @@ export function App() {
           <AppHeader />
           <main className="">
             <Routes>
-              <Route path="/edit" element={<LinkSharingIndex />} />
-              <Route path="/profile/:userId" element={<ProfileDetails />} />
+              <Route path="/" element={<LinkSharingIndex />} >
+                <Route path="/profile" element={<ProfileDetails />} />
+                <Route path="/edit" element={<CustomizeMain />} />
+              </Route>
+              {/* <Route path="/profile/:userId" element={<ProfileDetails />} /> */}
               <Route path="/preview" element={<ProfileLaunchPreview />} />
               <Route path="auth" element={<LoginSignup />} />
             </Routes>

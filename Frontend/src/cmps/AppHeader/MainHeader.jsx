@@ -31,7 +31,7 @@ export function MainHeader() {
           <h4>Links</h4>
         </NavLink>
         <NavLink
-          to="/profile/123"
+          to="/profile"
           className={({ isActive }) =>
             `flex flex-row items-center rounded-md px-4 py-2 font-bold gap-2 ${
               isActive
