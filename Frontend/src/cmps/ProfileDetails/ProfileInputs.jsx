@@ -1,6 +1,6 @@
 export function ProfileInputs({ handleChange, email, firstName, lastName }) {
   return (
-    <div className="flex flex-col gap-5 bg-background-mainBg text-slate-500 p-6 rounded-xl mb-9 w-full">
+    <div className="flex flex-col gap-5 bg-background-mainBg text-slate-700 p-6 rounded-xl mb-9 w-full">
       <div className="flex flex-row justify-between">
         <label>First name*</label>
         <input
