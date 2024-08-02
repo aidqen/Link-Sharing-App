@@ -12,7 +12,7 @@ export function PhonePreviewDetails() {
         alt=""
       />
       <h3 className="mb-2 font-semibold text-lg">Ben Wright</h3>
-      <h4 className="text-sm text-slate-500 mb-20">ben@example.com</h4>
+      <h4 className="text-sm text-slate-500 mb-10">ben@example.com</h4>
       <div className='w-full h-full'>
         {linksList &&
           linksList.map(link => {
