@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { LinkSharingIndex } from './pages/LinkSharingIndex'
-import { ProfileDetails } from './pages/ProfileDetails'
+import { ProfileDetails } from './cmps/ProfileDetails'
 import { LoginSignup } from './pages/LoginSignup'
 import { AppHeader } from './cmps/AppHeader/AppHeader'
 import { Provider } from 'react-redux'

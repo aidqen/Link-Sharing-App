@@ -8,6 +8,7 @@ export default {
       },
       width: {
         calcCustom: 'calc(100% - (1.75rem * 2))',
+        headerPreview: 'calc(100vw - 5em)'
       },
       height: {
         calcCustom: 'calc(100vh - (1.75rem * 2))',
