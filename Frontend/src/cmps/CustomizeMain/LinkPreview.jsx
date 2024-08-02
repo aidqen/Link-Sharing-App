@@ -41,7 +41,7 @@ export function LinkPreview({ link, handleLinksUpdate, idx, onRemoveLink }) {
           <select
             value={platform}
             className="border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent 
-           invalid:border-red-500 invalid:text-red-600 rounded-md px-3 py-3 transition duration-200"
+           invalid:border-red-500 invalid:text-red-600  hover:border-purple-bright rounded-md px-3 py-3 transition duration-200"
             onChange={handleUpdate}
             name="platform"
           >
@@ -60,7 +60,7 @@ export function LinkPreview({ link, handleLinksUpdate, idx, onRemoveLink }) {
             value={url}
             placeholder="https://www.example.com..."
             className="border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent 
-           invalid:border-red-500 invalid:text-red-600 rounded-md px-3 py-3 transition duration-200"
+           invalid:border-red-500 invalid:text-red-600 hover:border-purple-bright rounded-md px-3 py-3 transition duration-200"
             onChange={handleUpdate}
           />
         </div>

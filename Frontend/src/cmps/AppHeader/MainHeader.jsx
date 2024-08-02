@@ -20,7 +20,7 @@ export function MainHeader() {
         <NavLink
           to="/edit"
           className={({ isActive }) =>
-            `flex flex-row items-center rounded-md px-4 py-2 font-bold gap-2 ${
+            `flex flex-row items-center rounded-md px-4 py-2 font-bold gap-2 hover:text-purple-bright ${
               isActive
                 ? 'text-purple-bright bg-purple-light'
                 : 'text-gray-medium'
@@ -33,7 +33,7 @@ export function MainHeader() {
         <NavLink
           to="/profile"
           className={({ isActive }) =>
-            `flex flex-row items-center rounded-md px-4 py-2 font-bold gap-2 ${
+            `flex flex-row items-center rounded-md px-4 py-2 font-bold gap-2 hover:text-purple-bright ${
               isActive
                 ? 'text-purple-bright bg-purple-light'
                 : 'text-gray-medium'
