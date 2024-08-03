@@ -5,6 +5,7 @@ export const ADD_LINK = 'ADD_LINK'
 export const REMOVE_LINK = 'REMOVE_LINK'
 export const UPDATE_LINK = 'UPDATE_LINK'
 export const SET_LOADING = 'SET_LOADING'
+export const SET_PERSONAL_DETAILS = 'SET_PERSONAL_DETAILS'
 
 const initialState = {
   linksList: [{ _id: 'n199', platform: '', url: '', icon: '', }],
