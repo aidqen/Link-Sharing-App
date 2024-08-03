@@ -10,9 +10,6 @@ export function ProfileDetails() {
   // const params = useParams()
   const personalDetails = useSelector((state) => state.personalDetails);
   const [detailsToEdit, setDetailsToEdit] = useState({...personalDetails});
-  const [pickedImage, setPickedImage] = useState(null);
-  console.log('detailsToEdit:', detailsToEdit)
-  console.log('personalDetails:', personalDetails)
   
   function onSavePersonalDetails(){
     savePersonalDetails(detailsToEdit)
@@ -29,7 +26,7 @@ export function ProfileDetails() {
       <h4 className="font-extralight text-slate-400 mb-8">
         Add your details to create a personal touch to your profile
       </h4>
-      <ImagePick />
+      <ImagePick setDetailsToEdit={setDetailsToEdit} pickedImg={detailsToEdit.img}/>
       <ProfileInputs {...detailsToEdit} handleChange={handleChange}/>
       <hr className='h-[3px] w-full mb-4'/>
       <button onClick={onSavePersonalDetails} className='main-btn'>Save</button>
