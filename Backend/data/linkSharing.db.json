@@ -1,18 +1,31 @@
 [
     {
-        "id": "n100",
-        "link": "https://www.google.com",
-        "platform": "Google"
-        
-    },
-    {
-        "id": "n102",
-        "link": "https://www.facebook.com",
-        "platform": "Facebook"
-    },
-    {
-        "id": "n103",
-        "link": "https://www.twitter.com",
-        "platform": "Twitter"
+        "id": "u100",
+        "username": "aidqen",
+        "firstName": "Idan",
+        "lastName": "Markin",
+        "email": "idanmarkin8@gmail.com",
+        "styles": {
+            "img": "",
+            "imgBorder": "",
+            "backgroundColor": ""
+        },
+        "links": [
+            {
+                "id": "n100",
+                "link": "https://www.google.com",
+                "platform": "Google"
+            },
+            {
+                "id": "n102",
+                "link": "https://www.facebook.com",
+                "platform": "Facebook"
+            },
+            {
+                "id": "n103",
+                "link": "https://www.twitter.com",
+                "platform": "Twitter"
+            }
+        ]
     }
 ]

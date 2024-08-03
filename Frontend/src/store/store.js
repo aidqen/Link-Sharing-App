@@ -32,7 +32,10 @@ function appReducer(state = initialState, action) {
       console.log(action._id);
       return {
         ...state,
-        linksList: state.linksList.filter(link => link._id !== action._id),
+        linksList: state.linksList.filter(link => {
+          link._id !== action._id
+          console.log(link._id);
+        }),
       }
     case SET_PERSONAL_DETAILS:
       return { ...state, personalDetails: action.personalDetails }
