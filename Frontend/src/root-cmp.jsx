@@ -16,9 +16,9 @@ export function App() {
           <AppHeader />
           <main className="">
             <Routes>
-              <Route path="/" element={<LinkSharingIndex />} >
-                <Route path="/profile" element={<ProfileDetails />} />
-                <Route path="/edit" element={<CustomizeMain />} />
+              <Route path="/links" element={<LinkSharingIndex />} >
+                <Route path="/links/profile" element={<ProfileDetails />} />
+                <Route path="/links/edit" element={<CustomizeMain />} />
               </Route>
               <Route path="/preview" element={<ProfileLaunchPreview />} />
               <Route path="auth" element={<LoginSignup />} />

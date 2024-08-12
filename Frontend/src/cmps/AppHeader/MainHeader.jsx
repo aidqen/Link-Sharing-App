@@ -18,7 +18,7 @@ export function MainHeader() {
       </div>
       <nav className="flex flex-row gap-5 parent-nav text-[1em] ">
         <NavLink
-          to="/edit"
+          to="/links/edit"
           className={({ isActive }) =>
             `flex flex-row items-center rounded-md px-4 py-2 font-bold gap-2 hover:text-purple-bright ${
               isActive
@@ -31,7 +31,7 @@ export function MainHeader() {
           <h4>Links</h4>
         </NavLink>
         <NavLink
-          to="/profile"
+          to="/links/profile"
           className={({ isActive }) =>
             `flex flex-row items-center rounded-md px-4 py-2 font-bold gap-2 hover:text-purple-bright ${
               isActive
