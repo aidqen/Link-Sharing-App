@@ -9,7 +9,6 @@ export function PreviewHeader() {
 
   return (
     <header className="absolute w-headerPreview rounded-lg px-10 mb-7 h-20 flex flex-row items-center justify-between bg-white z-10">
-        
       <button
         onClick={navigateToEditor}
         className="py-3 px-6 border border-purple-bright text-purple-bright rounded-md font-semibold  hover:bg-purple-bright hover:text-white duration-200"

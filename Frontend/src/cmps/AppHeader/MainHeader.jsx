@@ -18,6 +18,19 @@ export function MainHeader() {
       </div>
       <nav className="flex flex-row gap-5 parent-nav text-[1em] ">
         <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `flex flex-row items-center rounded-md px-4 py-2 font-bold gap-2 hover:text-purple-bright ${
+              isActive
+                ? 'text-purple-bright bg-purple-light'
+                : 'text-gray-medium'
+            }`
+          }
+        >
+          <i className="fas fa-home"></i>
+          <h4>Home</h4>
+        </NavLink>
+        <NavLink
           to="/links/edit"
           className={({ isActive }) =>
             `flex flex-row items-center rounded-md px-4 py-2 font-bold gap-2 hover:text-purple-bright ${
@@ -40,7 +53,7 @@ export function MainHeader() {
             }`
           }
         >
-          <i className="fa-regular fa-circle-user fa-xs"></i>
+          <i className="fa-regular fa-circle-user fa-md"></i>
           <h4>Profile Details</h4>
         </NavLink>
       </nav>

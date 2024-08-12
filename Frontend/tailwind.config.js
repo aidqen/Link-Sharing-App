@@ -13,6 +13,7 @@ export default {
       height: {
         calcCustom: 'calc(100vh - (1.75rem * 2))',
         mainHeight: 'calc(100% - (5rem + (1.75rem * 2)))',
+        
       },
       colors: {
         purple: {

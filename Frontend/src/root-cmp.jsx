@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import { store } from './store/store'
 import { ProfileLaunchPreview } from './pages/ProfileLaunchPreview'
 import { CustomizeMain } from './cmps/CustomizeMain/CustomizeMain'
+import { Home } from './pages/Home'
 
 export function App() {
   return (
@@ -14,8 +15,9 @@ export function App() {
       <Router>
         <section className="app h-calcCustom font-sans overflow-x-hidden m-7">
           <AppHeader />
-          <main className="">
+          <main className='h-mainHeight'>
             <Routes>
+              <Route path="/" element={<Home />} />
               <Route path="/links" element={<LinkSharingIndex />} >
                 <Route path="/links/profile" element={<ProfileDetails />} />
                 <Route path="/links/edit" element={<CustomizeMain />} />
